@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A4241DF1E3074D600C268E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241DE1E3074D600C268E2 /* AppDelegate.swift */; };
+		3A4241E11E3074D600C268E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241E01E3074D600C268E2 /* ViewController.swift */; };
+		3A4241E41E3074D600C268E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4241E21E3074D600C268E2 /* Main.storyboard */; };
+		3A4241E61E3074D600C268E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4241E51E3074D600C268E2 /* Assets.xcassets */; };
+		3A4241E91E3074D600C268E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4241E71E3074D600C268E2 /* LaunchScreen.storyboard */; };
+		3A4241F41E3074D600C268E2 /* CanyonBomberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241F31E3074D600C268E2 /* CanyonBomberTests.swift */; };
+		3A4241FF1E3074D600C268E2 /* CanyonBomberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241FE1E3074D600C268E2 /* CanyonBomberUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A4241F01E3074D600C268E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A4241D31E3074D500C268E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A4241DA1E3074D500C268E2;
+			remoteInfo = CanyonBomber;
+		};
+		3A4241FB1E3074D600C268E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A4241D31E3074D500C268E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A4241DA1E3074D500C268E2;
+			remoteInfo = CanyonBomber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A4241DB1E3074D600C268E2 /* CanyonBomber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanyonBomber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4241DE1E3074D600C268E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A4241E01E3074D600C268E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A4241E31E3074D600C268E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A4241E51E3074D600C268E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A4241E81E3074D600C268E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A4241EA1E3074D600C268E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4241EF1E3074D600C268E2 /* CanyonBomberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanyonBomberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4241F31E3074D600C268E2 /* CanyonBomberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanyonBomberTests.swift; sourceTree = "<group>"; };
+		3A4241F51E3074D600C268E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4241FA1E3074D600C268E2 /* CanyonBomberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanyonBomberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4241FE1E3074D600C268E2 /* CanyonBomberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanyonBomberUITests.swift; sourceTree = "<group>"; };
+		3A4242001E3074D600C268E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A4241D81E3074D500C268E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4241EC1E3074D600C268E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4241F71E3074D600C268E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A4241D21E3074D500C268E2 = {
+			isa = PBXGroup;
+			children = (
+				3A4241DD1E3074D600C268E2 /* CanyonBomber */,
+				3A4241F21E3074D600C268E2 /* CanyonBomberTests */,
+				3A4241FD1E3074D600C268E2 /* CanyonBomberUITests */,
+				3A4241DC1E3074D600C268E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A4241DC1E3074D600C268E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A4241DB1E3074D600C268E2 /* CanyonBomber.app */,
+				3A4241EF1E3074D600C268E2 /* CanyonBomberTests.xctest */,
+				3A4241FA1E3074D600C268E2 /* CanyonBomberUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A4241DD1E3074D600C268E2 /* CanyonBomber */ = {
+			isa = PBXGroup;
+			children = (
+				3A4241DE1E3074D600C268E2 /* AppDelegate.swift */,
+				3A4241E01E3074D600C268E2 /* ViewController.swift */,
+				3A4241E21E3074D600C268E2 /* Main.storyboard */,
+				3A4241E51E3074D600C268E2 /* Assets.xcassets */,
+				3A4241E71E3074D600C268E2 /* LaunchScreen.storyboard */,
+				3A4241EA1E3074D600C268E2 /* Info.plist */,
+			);
+			path = CanyonBomber;
+			sourceTree = "<group>";
+		};
+		3A4241F21E3074D600C268E2 /* CanyonBomberTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A4241F31E3074D600C268E2 /* CanyonBomberTests.swift */,
+				3A4241F51E3074D600C268E2 /* Info.plist */,
+			);
+			path = CanyonBomberTests;
+			sourceTree = "<group>";
+		};
+		3A4241FD1E3074D600C268E2 /* CanyonBomberUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A4241FE1E3074D600C268E2 /* CanyonBomberUITests.swift */,
+				3A4242001E3074D600C268E2 /* Info.plist */,
+			);
+			path = CanyonBomberUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A4241DA1E3074D500C268E2 /* CanyonBomber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4242031E3074D600C268E2 /* Build configuration list for PBXNativeTarget "CanyonBomber" */;
+			buildPhases = (
+				3A4241D71E3074D500C268E2 /* Sources */,
+				3A4241D81E3074D500C268E2 /* Frameworks */,
+				3A4241D91E3074D500C268E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanyonBomber;
+			productName = CanyonBomber;
+			productReference = 3A4241DB1E3074D600C268E2 /* CanyonBomber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A4241EE1E3074D600C268E2 /* CanyonBomberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4242061E3074D600C268E2 /* Build configuration list for PBXNativeTarget "CanyonBomberTests" */;
+			buildPhases = (
+				3A4241EB1E3074D600C268E2 /* Sources */,
+				3A4241EC1E3074D600C268E2 /* Frameworks */,
+				3A4241ED1E3074D600C268E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A4241F11E3074D600C268E2 /* PBXTargetDependency */,
+			);
+			name = CanyonBomberTests;
+			productName = CanyonBomberTests;
+			productReference = 3A4241EF1E3074D600C268E2 /* CanyonBomberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A4241F91E3074D600C268E2 /* CanyonBomberUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4242091E3074D600C268E2 /* Build configuration list for PBXNativeTarget "CanyonBomberUITests" */;
+			buildPhases = (
+				3A4241F61E3074D600C268E2 /* Sources */,
+				3A4241F71E3074D600C268E2 /* Frameworks */,
+				3A4241F81E3074D600C268E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A4241FC1E3074D600C268E2 /* PBXTargetDependency */,
+			);
+			name = CanyonBomberUITests;
+			productName = CanyonBomberUITests;
+			productReference = 3A4241FA1E3074D600C268E2 /* CanyonBomberUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A4241D31E3074D500C268E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = lactobacilai;
+				TargetAttributes = {
+					3A4241DA1E3074D500C268E2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EGCCG9C3JG;
+						ProvisioningStyle = Automatic;
+					};
+					3A4241EE1E3074D600C268E2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EGCCG9C3JG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A4241DA1E3074D500C268E2;
+					};
+					3A4241F91E3074D600C268E2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EGCCG9C3JG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A4241DA1E3074D500C268E2;
+					};
+				};
+			};
+			buildConfigurationList = 3A4241D61E3074D500C268E2 /* Build configuration list for PBXProject "CanyonBomber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A4241D21E3074D500C268E2;
+			productRefGroup = 3A4241DC1E3074D600C268E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A4241DA1E3074D500C268E2 /* CanyonBomber */,
+				3A4241EE1E3074D600C268E2 /* CanyonBomberTests */,
+				3A4241F91E3074D600C268E2 /* CanyonBomberUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A4241D91E3074D500C268E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4241E91E3074D600C268E2 /* LaunchScreen.storyboard in Resources */,
+				3A4241E61E3074D600C268E2 /* Assets.xcassets in Resources */,
+				3A4241E41E3074D600C268E2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4241ED1E3074D600C268E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4241F81E3074D600C268E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A4241D71E3074D500C268E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4241E11E3074D600C268E2 /* ViewController.swift in Sources */,
+				3A4241DF1E3074D600C268E2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4241EB1E3074D600C268E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4241F41E3074D600C268E2 /* CanyonBomberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4241F61E3074D600C268E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4241FF1E3074D600C268E2 /* CanyonBomberUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A4241F11E3074D600C268E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A4241DA1E3074D500C268E2 /* CanyonBomber */;
+			targetProxy = 3A4241F01E3074D600C268E2 /* PBXContainerItemProxy */;
+		};
+		3A4241FC1E3074D600C268E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A4241DA1E3074D500C268E2 /* CanyonBomber */;
+			targetProxy = 3A4241FB1E3074D600C268E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A4241E21E3074D600C268E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A4241E31E3074D600C268E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A4241E71E3074D600C268E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A4241E81E3074D600C268E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A4242011E3074D600C268E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A4242021E3074D600C268E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A4242041E3074D600C268E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EGCCG9C3JG;
+				INFOPLIST_FILE = CanyonBomber/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lactobacilai.CanyonBomber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3A4242051E3074D600C268E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EGCCG9C3JG;
+				INFOPLIST_FILE = CanyonBomber/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lactobacilai.CanyonBomber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3A4242071E3074D600C268E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EGCCG9C3JG;
+				INFOPLIST_FILE = CanyonBomberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lactobacilai.CanyonBomberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanyonBomber.app/CanyonBomber";
+			};
+			name = Debug;
+		};
+		3A4242081E3074D600C268E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EGCCG9C3JG;
+				INFOPLIST_FILE = CanyonBomberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lactobacilai.CanyonBomberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanyonBomber.app/CanyonBomber";
+			};
+			name = Release;
+		};
+		3A42420A1E3074D600C268E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EGCCG9C3JG;
+				INFOPLIST_FILE = CanyonBomberUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lactobacilai.CanyonBomberUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CanyonBomber;
+			};
+			name = Debug;
+		};
+		3A42420B1E3074D600C268E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EGCCG9C3JG;
+				INFOPLIST_FILE = CanyonBomberUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lactobacilai.CanyonBomberUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CanyonBomber;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A4241D61E3074D500C268E2 /* Build configuration list for PBXProject "CanyonBomber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4242011E3074D600C268E2 /* Debug */,
+				3A4242021E3074D600C268E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A4242031E3074D600C268E2 /* Build configuration list for PBXNativeTarget "CanyonBomber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4242041E3074D600C268E2 /* Debug */,
+				3A4242051E3074D600C268E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A4242061E3074D600C268E2 /* Build configuration list for PBXNativeTarget "CanyonBomberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4242071E3074D600C268E2 /* Debug */,
+				3A4242081E3074D600C268E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A4242091E3074D600C268E2 /* Build configuration list for PBXNativeTarget "CanyonBomberUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A42420A1E3074D600C268E2 /* Debug */,
+				3A42420B1E3074D600C268E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A4241D31E3074D500C268E2 /* Project object */;
+}
