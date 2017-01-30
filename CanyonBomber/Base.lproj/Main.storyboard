@@ -29,11 +29,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9UT-Yr-KIA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8UY-1V-Rgx"/>
-                            <constraint firstAttribute="trailing" secondItem="9UT-Yr-KIA" secondAttribute="trailing" id="AHR-kl-VxI"/>
+                            <constraint firstItem="9UT-Yr-KIA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="AHR-kl-VxI"/>
                             <constraint firstItem="9UT-Yr-KIA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FNP-zd-6dP"/>
                             <constraint firstItem="9UT-Yr-KIA" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HkE-jG-tmq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="9UT-Yr-KIA" id="gId-sL-fvY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
