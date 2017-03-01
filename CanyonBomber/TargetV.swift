@@ -38,13 +38,20 @@ class TargetV: UIView  {
     }
     
     
-    private let rows = 1
-    private let itemPerRow = 10 //will be set by VC from Model
+    
+    //NOTE: use TargetV instead
+    private let desiredTotalNumOfSquares = 10 //will be set by VC from Model
+    private let rows = 2
+    private  var itemPerRow: Int {
+        return desiredTotalNumOfSquares/rows
+    }
+    
     private var color = UIColor.cyan
     var countSquares = 0
 
     
     
+    //NOTE: targetView will be allocated evenly to desired # of squares
     private var squareSize: CGSize{
         let width = self.bounds.width/CGFloat(itemPerRow)
         return CGSize(width: width, height: width)
@@ -124,11 +131,13 @@ class TargetV: UIView  {
     }
     
     func populateSquares(){
-                
+        
+        print("WIDTH: \(self.bounds.width) -- HEIGHT: \(self.bounds.height)")
+        
         //for the boundRect
         for row in 1...rows{
             //start at zero so it snaps to the edge
-            for i in 0...itemPerRow-1{
+            for i in 1...itemPerRow{
                 let xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) )
                 let yPoint = self.bounds.height - (squareSize.height * CGFloat(row) )
                 let coordinates = CGPoint(x: xPoint, y: yPoint)

@@ -20,7 +20,7 @@ class CanyonBomberVC: UIViewController {
         
         didSet{
             print("gameView DIDSET")
-            //gameView.backgroundColor = UIColor.cyan
+            gameView.backgroundColor = UIColor.cyan
             //let frame = CanyonBomberModel.getTargetFrame(parentView: gameView)
             //targetView = TargetV(frame: frame)
         }
@@ -33,7 +33,7 @@ class CanyonBomberVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //print("viewDidLoad")
+        print("viewDidLoad")
         
         
         
