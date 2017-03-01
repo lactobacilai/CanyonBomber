@@ -5,6 +5,12 @@
 //  Created by welai on 2017-01-22.
 //  Copyright © 2017 lactobacilai. All rights reserved.
 //
+/*
+ CanyonBomberV is the gameView
+ CanyonBomberV will have TargetView and PlayerView
+ TargetView will be of any type: Squares (current for now)
+ 
+ */
 
 import UIKit
 
@@ -13,7 +19,10 @@ class CanyonBomberVC: UIViewController {
    
     
     //MARK: -Vars
-    var targetView = TargetV()    
+    private let desiredTotalNumOfSquares = 280 //Model
+    private let rows = 14    //Model
+
+    
     //MARK: -Outlets
     
     @IBOutlet weak var gameView: CanyonBomberV!{
@@ -32,14 +41,7 @@ class CanyonBomberVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("viewDidLoad")
-        
-        
-        
-        //print("gameView: x=>\(gameView.bounds.minX), y=>\(gameView.bounds.minY), xMax=>\(gameView.bounds.maxX), yMax=>\(gameView.bounds.maxY) ")
-    
-        
     }
     
     
@@ -47,35 +49,19 @@ class CanyonBomberVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         print("viewDidLayoutSubviews")
-        gameView.addTargetView()
-        
-        
-        //print("gameView: x=>\(gameView.bounds.minX), y=>\(gameView.bounds.minY), xMax=>\(gameView.bounds.maxX), yMax=>\(gameView.bounds.maxY) ")
-        
-        
-//        let targetFrame = CGRect(x: gameView.frame.minX,
-//                                 y: gameView.bounds.maxY - CGFloat(500),
-//                                 width: gameView.bounds.maxX,
-//                                 height: CGFloat(500))
-//        targetView.frame = targetFrame
-//        targetView.backgroundColor = UIColor.blue
-//        targetView.populateSquares()
-//        
-//        gameView.addSubview(targetView)
-//        
-        
-        
+        gameView.addTargetView(desiredTotalNumOfSquares: desiredTotalNumOfSquares, rows: rows)
+        gameView.targetView!.populateSquares()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)        
-        gameView.targetView.animating = true
+        gameView.targetView!.animating = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        gameView.targetView.animating = false
+        gameView.targetView!.animating = false
     }
     
 

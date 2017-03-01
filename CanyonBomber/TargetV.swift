@@ -9,24 +9,16 @@
 import UIKit
 
 class TargetV: UIView  {
+    
+    private let desiredTotalNumOfSquares: Int?
+    private let rows: Int?
+    private  var squaresPerRow: Int? {
+        return desiredTotalNumOfSquares!/rows!
+    }
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
     private lazy var animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self)
     private let squareBehavior = SquareBehavior()
-    
+
     var animating: Bool = false{
         didSet{
             if animating{
@@ -37,25 +29,42 @@ class TargetV: UIView  {
         }
     }
     
-    
-    
-    //NOTE: use TargetV instead
-    private let desiredTotalNumOfSquares = 10 //will be set by VC from Model
-    private let rows = 2
-    private  var itemPerRow: Int {
-        return desiredTotalNumOfSquares/rows
-    }
-    
     private var color = UIColor.cyan
     var countSquares = 0
+    
+    
+    private var squareSize: CGSize{
+        let width = self.bounds.width/CGFloat(squaresPerRow!)
+        return CGSize(width: width, height: width)
+    }
+
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+    
+    
+    init(desiredTotalNumOfSquares: Int, rows: Int, frame: CGRect) {
+        self.desiredTotalNumOfSquares = desiredTotalNumOfSquares
+        self.rows = rows
+        super.init(frame: frame)
+    }
 
     
     
-    //NOTE: targetView will be allocated evenly to desired # of squares
-    private var squareSize: CGSize{
-        let width = self.bounds.width/CGFloat(itemPerRow)
-        return CGSize(width: width, height: width)
+    override init(frame: CGRect) {
+        self.desiredTotalNumOfSquares = 1
+        self.rows = 1
+        super.init(frame: frame)
     }
+    
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
+    
     
     
     
@@ -63,38 +72,28 @@ class TargetV: UIView  {
         
         print("------------\(countSquares)------------")
         
-        let startX = origin.x - CGFloat(countSquares*10) // origin.x - CGFloat(30) // CGFloat(0) //
-        let startY = origin.y // self.bounds.maxY - (squareSize.height*2) //- CGFloat(300) //self.bounds.height //origin.y //+ CGFloat(5)
+        let startX = origin.x //- CGFloat(countSquares*10)
+        let startY = origin.y
         let startOrigin = CGPoint(x: startX , y: startY)
         print("startOrigin: \(startOrigin.x), \(startOrigin.y)")
 
-        var squareFrame = CGRect(origin: startOrigin, size: squareSize)
-//        if(isFirst){
-//            squareFrame.origin.x += squareSize.width
-//            //isFirst = false
-//        }
-//        squareFrame.origin.x = CGFloat(0)
-//        squareFrame.origin.y = self.bounds.minY //self.bounds.height - CGFloat(100)
-        
-        //let squareFrame = CGRect(origin: CGPoint.zero, size: squareSize)
-        //let squareFrame = CGRect(origin: origin, size: squareSize)
-        
+        let squareFrame = CGRect(origin: startOrigin, size: squareSize)
         let square = UIView(frame: squareFrame)
+        print("addSquare1: \(square.frame)")
         
-        
-        let squareFrame2 = CGRect(origin: CGPoint.zero, size: CGSize(width: squareSize.width, height: squareSize.height) )
-        let label = UILabel(frame: squareFrame2)
+        let countLabelFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: squareSize.width, height: squareSize.height) )
+        let label = UILabel(frame: countLabelFrame)
         label.text = "\(countSquares)"
         
         square.addSubview(label)
         
         
-        if(color == UIColor.cyan){
+        if(color == UIColor.green){
             color = UIColor.orange
         }else if(color == UIColor.orange){
             color = UIColor.purple
         }else{
-            color = UIColor.cyan
+            color = UIColor.green
         }
         
         square.backgroundColor = color
@@ -102,31 +101,15 @@ class TargetV: UIView  {
         //add to TargetV
         self.addSubview(square)
         
-        print("addSquare: \(square.frame)")
+        print("addSquare2: \(square.frame)")
         
-        let newX = origin.x//-(0*(squareSize.width)) // CGFloat(375.0) //
-        let newY = origin.y//-(squareSize.width)
+        let newX = origin.x
+        let newY = origin.y
         let updatedOrigin = CGPoint(x: newX , y: newY)
-        let boundRect = CGRect(origin: updatedOrigin, size: squareSize)
-        
-        
-        
+        //let boundRect = CGRect(origin: updatedOrigin, size: squareSize)
         print("boundRect: \(updatedOrigin.x), \(updatedOrigin.y)")
         
         squareBehavior.addItem(item: square)
-        
-        
-//        let line = UIBezierPath()
-//       // line.addLine(to: updatedOrigin)
-//        line.move(to: CGPoint(x: origin.x, y: self.bounds.height) )
-//        line.addLine(to: updatedOrigin)
-//        //line.fill()
-        
-    
-//        let rect = UIBezierPath(rect: boundRect)
-//        //rect.fill()
-        
-        
         
     }
     
@@ -135,23 +118,19 @@ class TargetV: UIView  {
         print("WIDTH: \(self.bounds.width) -- HEIGHT: \(self.bounds.height)")
         
         //for the boundRect
-        for row in 1...rows{
+        for row in 1...rows!{
             //start at zero so it snaps to the edge
-            for i in 1...itemPerRow{
+            for i in 1...squaresPerRow!{
                 let xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) )
                 let yPoint = self.bounds.height - (squareSize.height * CGFloat(row) )
                 let coordinates = CGPoint(x: xPoint, y: yPoint)
                 
-                //print("x: \(xPoint), y: \(yPoint)")
+                print("x: \(xPoint), y: \(yPoint)")
                 
                 
                 countSquares += 1
                 
                 addSquare(origin: coordinates)
-                
-//                if i == 1 {
-//                    break
-//                }
                 //print("\(collisionBehaviour.boundary(withIdentifier: "test" as NSCopying))")
             }
             print("===================================")

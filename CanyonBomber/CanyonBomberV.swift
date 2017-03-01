@@ -11,14 +11,9 @@ import UIKit
 class CanyonBomberV: UIView {
     
     //MARK: -Vars
-    var targetView = TargetV()
-    private let desiredTotalNumOfSquares = 10 //will be set by VC from Model
-    private let rows = 2
-    private  var itemPerRow: Int {
-        return desiredTotalNumOfSquares/rows
-    }
-
-    //10/5*3 = 6,,
+    var targetView:TargetV?
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -28,19 +23,20 @@ class CanyonBomberV: UIView {
     */
     
     
-     func addTargetView() {
+    func addTargetView(desiredTotalNumOfSquares: Int, rows: Int) {
      
-        let computerHeight = (self.bounds.maxX / CGFloat (itemPerRow) ) * CGFloat(rows)
+        let squaresPerRow = desiredTotalNumOfSquares/rows
+        let computedHeight = (self.bounds.maxX / CGFloat (squaresPerRow) ) * CGFloat(rows)
         let targetFrame = CGRect(x: self.frame.minX,
-                                 y: self.bounds.maxY - computerHeight,
+                                 y: self.bounds.maxY - computedHeight,
                                  width: self.bounds.maxX,
-                                 height: computerHeight)
+                                 height: computedHeight)
         
-        targetView.frame = targetFrame
-        targetView.backgroundColor = UIColor.darkGray
-        targetView.populateSquares()
+        targetView = TargetV(desiredTotalNumOfSquares: desiredTotalNumOfSquares, rows: rows, frame: targetFrame)
         
-        self.addSubview(targetView)
+        targetView!.backgroundColor = UIColor.darkGray
+        self.addSubview(targetView!)
+        
     }
     
     
