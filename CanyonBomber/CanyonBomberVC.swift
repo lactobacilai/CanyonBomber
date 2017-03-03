@@ -9,7 +9,6 @@
  CanyonBomberV is the gameView
  CanyonBomberV will have TargetView and PlayerView
  TargetView will be of any type: Squares (current for now)
- 
  */
 
 import UIKit
@@ -19,8 +18,8 @@ class CanyonBomberVC: UIViewController {
    
     
     //MARK: -Vars
-    private let desiredTotalNumOfSquares = 280 //Model
-    private let rows = 14    //Model
+    private let desiredTotalNumOfSquares = 120 //Model
+    private let rows = 10    //Model
 
     
     //MARK: -Outlets
@@ -29,7 +28,7 @@ class CanyonBomberVC: UIViewController {
         
         didSet{
             print("gameView DIDSET")
-            gameView.backgroundColor = UIColor.cyan
+            //gameView.backgroundColor = UIColor.cyan
             //let frame = CanyonBomberModel.getTargetFrame(parentView: gameView)
             //targetView = TargetV(frame: frame)
         }

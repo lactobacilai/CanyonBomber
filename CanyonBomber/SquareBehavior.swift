@@ -14,7 +14,7 @@ class SquareBehavior: UIDynamicBehavior {
         let gravity = UIGravityBehavior()
         gravity.angle = 0
         //gravityBehaviour.gravityDirection = CGVector(dx: 10.0, dy: 10.0)//(0.0, 10.0);
-        gravity.magnitude = 0.1
+        gravity.magnitude = 0.005
         return gravity
     }()
     

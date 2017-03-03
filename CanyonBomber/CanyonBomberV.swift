@@ -34,7 +34,7 @@ class CanyonBomberV: UIView {
         
         targetView = TargetV(desiredTotalNumOfSquares: desiredTotalNumOfSquares, rows: rows, frame: targetFrame)
         
-        targetView!.backgroundColor = UIColor.darkGray
+        //targetView!.backgroundColor = UIColor.darkGray
         self.addSubview(targetView!)
         
     }

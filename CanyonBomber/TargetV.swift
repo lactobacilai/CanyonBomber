@@ -29,7 +29,7 @@ class TargetV: UIView  {
         }
     }
     
-    private var color = UIColor.cyan
+    private var color = UIColor.white //.cyan
     var countSquares = 0
     
     
@@ -75,19 +75,20 @@ class TargetV: UIView  {
         let startX = origin.x //- CGFloat(countSquares*10)
         let startY = origin.y
         let startOrigin = CGPoint(x: startX , y: startY)
-        print("startOrigin: \(startOrigin.x), \(startOrigin.y)")
+        //print("startOrigin: \(startOrigin.x), \(startOrigin.y)")
 
         let squareFrame = CGRect(origin: startOrigin, size: squareSize)
         let square = UIView(frame: squareFrame)
-        print("addSquare1: \(square.frame)")
+        //print("addSquare1: \(square.frame)")
         
         let countLabelFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: squareSize.width, height: squareSize.height) )
         let label = UILabel(frame: countLabelFrame)
         label.text = "\(countSquares)"
+        label.font = UIFont(name: "Helvetica", size: CGFloat(7))
         
         square.addSubview(label)
         
-        
+        /*
         if(color == UIColor.green){
             color = UIColor.orange
         }else if(color == UIColor.orange){
@@ -95,13 +96,14 @@ class TargetV: UIView  {
         }else{
             color = UIColor.green
         }
+        */
         
         square.backgroundColor = color
         
         //add to TargetV
         self.addSubview(square)
         
-        print("addSquare2: \(square.frame)")
+        //print("addSquare2: \(square.frame)")
         
         let newX = origin.x
         let newY = origin.y
@@ -119,10 +121,27 @@ class TargetV: UIView  {
         
         //for the boundRect
         for row in 1...rows!{
+            
+            if(color == UIColor.orange){
+                color = UIColor.white
+            }else if(color == UIColor.white){
+                color = UIColor.orange
+            }
+//            else{
+//                color = UIColor.orange
+//            }
+            
             //start at zero so it snaps to the edge
             for i in 1...squaresPerRow!{
-                let xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) )
+                
+                var xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) ) - ( CGFloat(30) )
+                
+                if(i == squaresPerRow){
+                    xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) )
+                }
+                
                 let yPoint = self.bounds.height - (squareSize.height * CGFloat(row) )
+                
                 let coordinates = CGPoint(x: xPoint, y: yPoint)
                 
                 print("x: \(xPoint), y: \(yPoint)")
@@ -134,6 +153,7 @@ class TargetV: UIView  {
                 //print("\(collisionBehaviour.boundary(withIdentifier: "test" as NSCopying))")
             }
             print("===================================")
+            
             
 
         }
