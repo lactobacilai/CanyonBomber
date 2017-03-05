@@ -11,15 +11,16 @@
 		3A131D391E354E69007E4A85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A131D381E354E69007E4A85 /* LoginVC.swift */; };
 		3A131D3B1E354EAE007E4A85 /* CanyonBomberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A131D3A1E354EAE007E4A85 /* CanyonBomberModel.swift */; };
 		3A131D3D1E354F52007E4A85 /* CanyonBomberV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A131D3C1E354F52007E4A85 /* CanyonBomberV.swift */; };
-		3A131D3F1E355168007E4A85 /* AircraftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A131D3E1E355168007E4A85 /* AircraftV.swift */; };
 		3A131D431E355261007E4A85 /* TargetV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A131D421E355261007E4A85 /* TargetV.swift */; };
+		3A3FAF441E6B37C500B2D766 /* AircraftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FAF431E6B37C500B2D766 /* AircraftV.swift */; };
 		3A4241DF1E3074D600C268E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241DE1E3074D600C268E2 /* AppDelegate.swift */; };
 		3A4241E41E3074D600C268E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4241E21E3074D600C268E2 /* Main.storyboard */; };
-		3A4241E61E3074D600C268E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4241E51E3074D600C268E2 /* Assets.xcassets */; };
 		3A4241E91E3074D600C268E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4241E71E3074D600C268E2 /* LaunchScreen.storyboard */; };
 		3A4241F41E3074D600C268E2 /* CanyonBomberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241F31E3074D600C268E2 /* CanyonBomberTests.swift */; };
 		3A4241FF1E3074D600C268E2 /* CanyonBomberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4241FE1E3074D600C268E2 /* CanyonBomberUITests.swift */; };
-		3AEAD35E1E3EEF780039D068 /* SquareBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAD35D1E3EEF780039D068 /* SquareBehavior.swift */; };
+		3AB8CA981E6BAA9B001AD2C9 /* AircraftBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8CA971E6BAA9B001AD2C9 /* AircraftBehavior.swift */; };
+		3AB8CA9A1E6BCF33001AD2C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB8CA991E6BCF33001AD2C9 /* Assets.xcassets */; };
+		3AEAD35E1E3EEF780039D068 /* TargetBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAD35D1E3EEF780039D068 /* TargetBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +45,11 @@
 		3A131D381E354E69007E4A85 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3A131D3A1E354EAE007E4A85 /* CanyonBomberModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanyonBomberModel.swift; sourceTree = "<group>"; };
 		3A131D3C1E354F52007E4A85 /* CanyonBomberV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanyonBomberV.swift; sourceTree = "<group>"; };
-		3A131D3E1E355168007E4A85 /* AircraftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftV.swift; sourceTree = "<group>"; };
 		3A131D421E355261007E4A85 /* TargetV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetV.swift; sourceTree = "<group>"; };
+		3A3FAF431E6B37C500B2D766 /* AircraftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftV.swift; sourceTree = "<group>"; };
 		3A4241DB1E3074D600C268E2 /* CanyonBomber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanyonBomber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4241DE1E3074D600C268E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A4241E31E3074D600C268E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A4241E51E3074D600C268E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4241E81E3074D600C268E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4241EA1E3074D600C268E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4241EF1E3074D600C268E2 /* CanyonBomberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanyonBomberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +58,9 @@
 		3A4241FA1E3074D600C268E2 /* CanyonBomberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanyonBomberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4241FE1E3074D600C268E2 /* CanyonBomberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanyonBomberUITests.swift; sourceTree = "<group>"; };
 		3A4242001E3074D600C268E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AEAD35D1E3EEF780039D068 /* SquareBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareBehavior.swift; sourceTree = "<group>"; };
+		3AB8CA971E6BAA9B001AD2C9 /* AircraftBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftBehavior.swift; sourceTree = "<group>"; };
+		3AB8CA991E6BCF33001AD2C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AEAD35D1E3EEF780039D068 /* TargetBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,8 @@
 		3A131D351E354DBE007E4A85 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3AB8CA991E6BCF33001AD2C9 /* Assets.xcassets */,
 				3A4241DE1E3074D600C268E2 /* AppDelegate.swift */,
-				3A4241E51E3074D600C268E2 /* Assets.xcassets */,
 				3A4241E71E3074D600C268E2 /* LaunchScreen.storyboard */,
 				3A4241EA1E3074D600C268E2 /* Info.plist */,
 			);
@@ -101,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				3A131D3C1E354F52007E4A85 /* CanyonBomberV.swift */,
-				3A131D3E1E355168007E4A85 /* AircraftV.swift */,
 				3A131D421E355261007E4A85 /* TargetV.swift */,
+				3A3FAF431E6B37C500B2D766 /* AircraftV.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -140,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				3A131D3A1E354EAE007E4A85 /* CanyonBomberModel.swift */,
-				3AEAD35D1E3EEF780039D068 /* SquareBehavior.swift */,
+				3AB8CA971E6BAA9B001AD2C9 /* AircraftBehavior.swift */,
+				3AEAD35D1E3EEF780039D068 /* TargetBehavior.swift */,
 				3A4241E21E3074D600C268E2 /* Main.storyboard */,
 				3A131D411E35517C007E4A85 /* ViewControllers */,
 				3A131D401E355171007E4A85 /* Views */,
@@ -278,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4241E91E3074D600C268E2 /* LaunchScreen.storyboard in Resources */,
-				3A4241E61E3074D600C268E2 /* Assets.xcassets in Resources */,
+				3AB8CA9A1E6BCF33001AD2C9 /* Assets.xcassets in Resources */,
 				3A4241E41E3074D600C268E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,14 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AEAD35E1E3EEF780039D068 /* SquareBehavior.swift in Sources */,
+				3AEAD35E1E3EEF780039D068 /* TargetBehavior.swift in Sources */,
 				3A131D371E354E44007E4A85 /* CanyonBomberVC.swift in Sources */,
 				3A4241DF1E3074D600C268E2 /* AppDelegate.swift in Sources */,
+				3AB8CA981E6BAA9B001AD2C9 /* AircraftBehavior.swift in Sources */,
 				3A131D3B1E354EAE007E4A85 /* CanyonBomberModel.swift in Sources */,
 				3A131D3D1E354F52007E4A85 /* CanyonBomberV.swift in Sources */,
-				3A131D3F1E355168007E4A85 /* AircraftV.swift in Sources */,
 				3A131D391E354E69007E4A85 /* LoginVC.swift in Sources */,
 				3A131D431E355261007E4A85 /* TargetV.swift in Sources */,
+				3A3FAF441E6B37C500B2D766 /* AircraftV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

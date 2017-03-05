@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SquareBehavior: UIDynamicBehavior {
+class TargetBehavior: UIDynamicBehavior {
     
     private var gravityBehaviour:UIGravityBehavior = {
         let gravity = UIGravityBehavior()
         gravity.angle = 0
-        //gravityBehaviour.gravityDirection = CGVector(dx: 10.0, dy: 10.0)//(0.0, 10.0);
-        gravity.magnitude = 0.005
+        //gravity.gravityDirection = CGVector(dx: 0, dy: 1)
+        gravity.magnitude = 0.01
         return gravity
     }()
     

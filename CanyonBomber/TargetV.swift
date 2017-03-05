@@ -17,7 +17,7 @@ class TargetV: UIView  {
     }
 
     private lazy var animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self)
-    private let squareBehavior = SquareBehavior()
+    private let squareBehavior = TargetBehavior()
 
     var animating: Bool = false{
         didSet{
@@ -54,32 +54,17 @@ class TargetV: UIView  {
         super.init(frame: frame)
     }
 
-    
-    
-    override init(frame: CGRect) {
-        self.desiredTotalNumOfSquares = 1
-        self.rows = 1
-        super.init(frame: frame)
-    }
-    
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
-    
-    
-    
     
     func addSquare(origin: CGPoint){
         
-        print("------------\(countSquares)------------")
+        //print("------------\(countSquares)------------")
         
         let startX = origin.x //- CGFloat(countSquares*10)
         let startY = origin.y
         let startOrigin = CGPoint(x: startX , y: startY)
-        //print("startOrigin: \(startOrigin.x), \(startOrigin.y)")
-
         let squareFrame = CGRect(origin: startOrigin, size: squareSize)
         let square = UIView(frame: squareFrame)
-        //print("addSquare1: \(square.frame)")
         
         let countLabelFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: squareSize.width, height: squareSize.height) )
         let label = UILabel(frame: countLabelFrame)
@@ -88,28 +73,10 @@ class TargetV: UIView  {
         
         square.addSubview(label)
         
-        /*
-        if(color == UIColor.green){
-            color = UIColor.orange
-        }else if(color == UIColor.orange){
-            color = UIColor.purple
-        }else{
-            color = UIColor.green
-        }
-        */
-        
         square.backgroundColor = color
         
         //add to TargetV
         self.addSubview(square)
-        
-        //print("addSquare2: \(square.frame)")
-        
-        let newX = origin.x
-        let newY = origin.y
-        let updatedOrigin = CGPoint(x: newX , y: newY)
-        //let boundRect = CGRect(origin: updatedOrigin, size: squareSize)
-        print("boundRect: \(updatedOrigin.x), \(updatedOrigin.y)")
         
         squareBehavior.addItem(item: square)
         
@@ -117,7 +84,7 @@ class TargetV: UIView  {
     
     func populateSquares(){
         
-        print("WIDTH: \(self.bounds.width) -- HEIGHT: \(self.bounds.height)")
+        //print("WIDTH: \(self.bounds.width) -- HEIGHT: \(self.bounds.height)")
         
         //for the boundRect
         for row in 1...rows!{
@@ -125,11 +92,10 @@ class TargetV: UIView  {
             if(color == UIColor.orange){
                 color = UIColor.white
             }else if(color == UIColor.white){
+                color = UIColor.red
+            }else {
                 color = UIColor.orange
             }
-//            else{
-//                color = UIColor.orange
-//            }
             
             //start at zero so it snaps to the edge
             for i in 1...squaresPerRow!{
@@ -144,7 +110,7 @@ class TargetV: UIView  {
                 
                 let coordinates = CGPoint(x: xPoint, y: yPoint)
                 
-                print("x: \(xPoint), y: \(yPoint)")
+                //print("x: \(xPoint), y: \(yPoint)")
                 
                 
                 countSquares += 1
@@ -152,13 +118,13 @@ class TargetV: UIView  {
                 addSquare(origin: coordinates)
                 //print("\(collisionBehaviour.boundary(withIdentifier: "test" as NSCopying))")
             }
-            print("===================================")
+            //print("===================================")
             
             
 
         }
         
-        print("countSquares: \(countSquares)")
+        
         
      }
     

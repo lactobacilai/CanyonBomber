@@ -12,6 +12,7 @@ class CanyonBomberV: UIView {
     
     //MARK: -Vars
     var targetView:TargetV?
+    var aircraftView:AircraftV?
     
     
     /*
@@ -36,12 +37,20 @@ class CanyonBomberV: UIView {
         
         //targetView!.backgroundColor = UIColor.darkGray
         self.addSubview(targetView!)
-        
     }
     
     
-    
-    
+    func addAircraftView() {
+        let aircraftFrame = CGRect(x: self.frame.minX,
+                                   y: self.bounds.minY + CGFloat(50),
+                                   width: self.bounds.maxX,
+                                   height: CGFloat(200))
+       
+        aircraftView = AircraftV(frame: aircraftFrame, aircraftType: AircraftV.AircraftType.BLIMP)
+
+        //aircraftView!.backgroundColor = UIColor.lightGray
+        self.addSubview(aircraftView!)
+    }
     
 
 }
