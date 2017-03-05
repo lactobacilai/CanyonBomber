@@ -22,8 +22,7 @@ class CanyonBomberV: UIView {
         // Drawing code
     }
     */
-    
-    
+        
     func addTargetView(desiredTotalNumOfSquares: Int, rows: Int) {
      
         let squaresPerRow = desiredTotalNumOfSquares/rows
@@ -34,7 +33,6 @@ class CanyonBomberV: UIView {
                                  height: computedHeight)
         
         targetView = TargetV(desiredTotalNumOfSquares: desiredTotalNumOfSquares, rows: rows, frame: targetFrame)
-        
         //targetView!.backgroundColor = UIColor.darkGray
         self.addSubview(targetView!)
     }
@@ -45,12 +43,17 @@ class CanyonBomberV: UIView {
                                    y: self.bounds.minY + CGFloat(50),
                                    width: self.bounds.maxX,
                                    height: CGFloat(200))
-       
-        aircraftView = AircraftV(frame: aircraftFrame, aircraftType: AircraftV.AircraftType.BLIMP)
-
-        //aircraftView!.backgroundColor = UIColor.lightGray
+        
+        /*// to add background image
+        let aircraftFrameBg = UIImageView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.bounds.maxX, height: self.bounds.maxY/4)))
+        aircraftFrameBg.image = UIImage(named: "cloud.png")
+        self.addSubview(aircraftFrameBg)
+        self.sendSubview(toBack: aircraftFrameBg)
+       */
+        aircraftView = AircraftV(frame: aircraftFrame, aircraftType: AircraftV.AircraftType.BALLOON)
         self.addSubview(aircraftView!)
     }
     
-
+    
+    
 }

@@ -13,7 +13,7 @@ class AircraftBehavior: UIDynamicBehavior {
     private var gravityBehaviour:UIGravityBehavior = {
         let gravity = UIGravityBehavior()
         gravity.angle = 0
-        gravity.magnitude = 0.01
+        gravity.magnitude = 0.03
         return gravity
     }()
     

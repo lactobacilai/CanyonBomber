@@ -28,8 +28,9 @@ class AircraftV: UIView {
     }
     
     private let aircraftBehavior = AircraftBehavior()
-    private lazy var animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self)
-    private var aircraft: UIView?
+    private lazy var animator: UIDynamicAnimator = UIDynamicAnimator(referenceView: self)
+    private var _aircraft: UIView?
+    
     
     var animating: Bool = false{
         didSet{
@@ -52,23 +53,20 @@ class AircraftV: UIView {
         -bombImage
      */
     init(frame: CGRect, aircraftType: AircraftType) {
-        
         super.init(frame: frame)
-        
-        self.aircraft = setAircraft(frame: frame, aircraftType: aircraftType)
-        
-        self.addSubview(self.aircraft!)
+        self.setAircraft(frame: frame, aircraftType: aircraftType)
+        aircraftBehavior.addItem(item: _aircraft!)
+        self.addSubview(self._aircraft!)
     }
 
+    
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     
     
-    
-    private func setAircraft(frame: CGRect, aircraftType: AircraftType) -> UIView{
+    private func setAircraft(frame: CGRect, aircraftType: AircraftType){
         
         var image: UIImage?
-        
         var aircraftFrameW: CGFloat?
         var aircraftFrameH: CGFloat?
         //altitude, highest = 0
@@ -114,16 +112,12 @@ class AircraftV: UIView {
         let aircraftImage = UIImageView(frame: CGRect(x: 0, y: 0, width: aircraftFrameW!, height: aircraftFrameH!) )
         aircraftImage.image = image!
         aircraftImage.contentMode = UIViewContentMode.scaleAspectFit
-        
+        //aircraftImage.backgroundColor = UIColor(red:0.98, green:0.96, blue:0.90, alpha:1.0)
         
         //aircraftView
-        let aircraft = UIView(frame: CGRect(x: -aircraftFrameW!, y: y, width: aircraftFrameW!, height: aircraftFrameH!) )
-        //aircraft.backgroundColor = UIColor.red
-        aircraft.addSubview(aircraftImage)
-        
-        aircraftBehavior.addItem(item: aircraft)
-
-        return aircraft
+        self._aircraft = UIView(frame: CGRect(x: -aircraftFrameW!, y: y, width: aircraftFrameW!, height: aircraftFrameH!) )
+        //self._aircraft!.backgroundColor = UIColor(red:0.98, green:0.96, blue:0.90, alpha:1.0)
+        self._aircraft!.addSubview(aircraftImage)
         
     }
     
@@ -151,7 +145,17 @@ class AircraftV: UIView {
     }
     
     override func layoutSubviews() { super.layoutSubviews()    }
-    override func willMove(toSuperview newSuperview: UIView?) { super.willMove(toSuperview: newSuperview) }
-    override func willRemoveSubview(_ subview: UIView) { }
+    override func willMove(toSuperview newSuperview: UIView?) {
+        print("willMove")
+        super.willMove(toSuperview: newSuperview)
+    }
+    
+    
+    /*
+    override func willRemoveSubview(_ subview: UIView) {
+        print("REMOVIIIIIING")
+        super.willRemoveSubview(subview)
+    }
+    */
 }
 

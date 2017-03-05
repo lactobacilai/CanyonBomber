@@ -66,11 +66,16 @@ class TargetV: UIView  {
         let squareFrame = CGRect(origin: startOrigin, size: squareSize)
         let square = UIView(frame: squareFrame)
         
-        let countLabelFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: squareSize.width, height: squareSize.height) )
-        let label = UILabel(frame: countLabelFrame)
+        let frameForSquareSubViews = CGRect(origin: CGPoint.zero, size: CGSize(width: squareSize.width, height: squareSize.height))
+        let label = UILabel(frame: frameForSquareSubViews)
         label.text = "\(countSquares)"
         label.font = UIFont(name: "Helvetica", size: CGFloat(7))
+        label.isOpaque = true
         
+        let squareBg = UIImageView(frame: frameForSquareSubViews)
+        squareBg.image = UIImage(named: "brick.png")
+        
+        square.addSubview(squareBg)
         square.addSubview(label)
         
         square.backgroundColor = color
@@ -86,21 +91,27 @@ class TargetV: UIView  {
         
         //print("WIDTH: \(self.bounds.width) -- HEIGHT: \(self.bounds.height)")
         
+        //http://uicolor.xyz/#/rgb-to-ui
+        color = UIColor.white //UIColor(red:0.92, green:0.93, blue:0.97, alpha:1.0)
+        
         //for the boundRect
         for row in 1...rows!{
             
+            /*
             if(color == UIColor.orange){
-                color = UIColor.white
+                color = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)  //UIColor.white
             }else if(color == UIColor.white){
                 color = UIColor.red
             }else {
                 color = UIColor.orange
             }
-            
+            */
+ 
+ 
             //start at zero so it snaps to the edge
             for i in 1...squaresPerRow!{
                 
-                var xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) ) - ( CGFloat(30) )
+                var xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) ) //- ( CGFloat(30) )
                 
                 if(i == squaresPerRow){
                     xPoint = self.bounds.width - ( squareSize.width * CGFloat(i) )
@@ -116,7 +127,7 @@ class TargetV: UIView  {
                 countSquares += 1
                 
                 addSquare(origin: coordinates)
-                //print("\(collisionBehaviour.boundary(withIdentifier: "test" as NSCopying))")
+                
             }
             //print("===================================")
             

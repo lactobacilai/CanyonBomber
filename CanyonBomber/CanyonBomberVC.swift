@@ -27,10 +27,9 @@ class CanyonBomberVC: UIViewController {
     //MARK: -Outlets
     
     @IBOutlet weak var gameView: CanyonBomberV!{
-        
         didSet{
             print("gameView DIDSET")
-            //gameView.backgroundColor = UIColor.cyan
+            //gameView.backgroundColor = UIColor(red:0.98, green:0.96, blue:0.90, alpha:1.0)
             //let frame = CanyonBomberModel.getTargetFrame(parentView: gameView)
             //targetView = TargetV(frame: frame)
         }
@@ -43,6 +42,13 @@ class CanyonBomberVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
+        
+        /*
+        let aircraftFrameBg = UIImageView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.bounds.maxX, height: self.view.bounds.maxY/4)))
+        aircraftFrameBg.image = UIImage(named: "cloud.png")
+        //self.view.addSubview(aircraftFrameBg)
+        self.view.sendSubview(toBack: aircraftFrameBg)
+        */
     }
     
     
@@ -54,6 +60,8 @@ class CanyonBomberVC: UIViewController {
         gameView.targetView!.populateSquares()
         
         gameView.addAircraftView()
+        
+
         
     }
     

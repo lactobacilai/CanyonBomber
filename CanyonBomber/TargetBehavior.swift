@@ -14,7 +14,7 @@ class TargetBehavior: UIDynamicBehavior {
         let gravity = UIGravityBehavior()
         gravity.angle = 0
         //gravity.gravityDirection = CGVector(dx: 0, dy: 1)
-        gravity.magnitude = 0.01
+        gravity.magnitude = 1
         return gravity
     }()
     
